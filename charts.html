@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gráfico de Pastel</title>
+  <style>
+    canvas {
+      display: block;
+      margin: 20px auto;
+    }
+  </style>
+</head>
+<body>
+
+<canvas id="graficoPastel" width="300" height="300"></canvas>
+
+<script>
+  // Obtener el elemento canvas y su contexto
+  var canvas = document.getElementById("graficoPastel");
+  var ctx = canvas.getContext("2d");
+
+  // Definir los datos para el gráfico de pastel
+  var datos = [30, 20, 25, 25]; // Porcentajes
+
+  // Definir colores correspondientes a los datos
+  var colores = ["blue", "orange", "yellow", "lightblue"];
+
+  // Calcular el ángulo inicial para cada segmento
+  var anguloInicial = 0;
+
+  // Dibujar el gráfico de pastel
+  for (var i = 0; i < datos.length; i++) {
+    // Calcular el ángulo final del segmento
+    var anguloFinal = anguloInicial + (datos[i] / 100) * 2 * Math.PI;
+
+    // Dibujar el segmento
+    ctx.beginPath();
+    ctx.moveTo(canvas.width / 2, canvas.height / 2);
+    ctx.arc(canvas.width / 2, canvas.height / 2, canvas.width / 3, anguloInicial, anguloFinal);
+    ctx.fillStyle = colores[i];
+    ctx.fill();
+
+    // Actualizar el ángulo inicial para el próximo segmento
+    anguloInicial = anguloFinal;
+  }
+</script>
+
+</body>
+</html>

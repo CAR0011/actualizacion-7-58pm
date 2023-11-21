@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Dashboard - SB Admin</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    </head>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Panel de Menú</title>
+         
+        <style>
+            body {
+                margin: 0;
+                font-family: 'Arial', sans-serif;
+                background-image: url(imagenes/unah2.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-color: rgb(244, 244, 244);
+                display: flex;
+                height: 100vh;
+            }
+            
+            .texto{
+                text-align:center; 
+                
+            }
+          
+            
+            .menu-panel {
+              
+                background-color: #FFC23E;
+                color: #fff;
+                padding: 30px;
+                width: 300px;
+                border-top-right-radius: 60px;
+                border-bottom-right-radius: 60px;
+                box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+            }
+            .card-footer {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                padding: 20px;
+                background-color: #fff;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+            .rounded-circle {
+                border-radius: 50%;
+                overflow: hidden;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .btn {
+                width: 100%;
+            }
+            .btn-primary {
+                border: 0;
+                background-color: #284D94;
+                color: #fff;
+            }
+            .btn-warning {
+                border: 0;
+                background-color: #EEA70D;
+                color: #fff;
+            }
+            .btn-danger {
+                border: 0;
+                background-color: #284D94;
+                color: #fff;
+            }
+            .btn-info {
+                border: 0;
+                background-color: #EEA70D;
+                color: #fff;
+            }
+            
+           
+            table {
+            height: 10%;
+            width: 70%;
+            border-collapse: collapse;
+            margin-top: 250px;
+            margin-left: -1410px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 1px;
+            text-align: center;
+        }
+        th {
+            padding: 8px;
+                background-color: #284D94;
+            
+            color: #fff;
+        }
+        h1 {
+            
+            text-align: center;
+            font-size: 45px;
+            padding: 50px;
+            margin-bottom: 10px;
+           
+         
+        }
+        h2 {
+            text-align: center;
+            font-size: 50px;
+            margin-bottom: 100px;
+        }
+        </style>
+    </head>
+    <body>
+      
+        
+        <div class="menu-panel">
+            <h2 class="font-weight-bold text-align mb-2">Jefatura</h2>
+            <div style="width: -80px; height: 200px;">
+            <img src="imagenes/logos.png">
+                
+            </div>
+            <p class="mb-2 text-center">Nombre de Usuario</p>
+            <button class="btn btn-primary mt-3">Agregar Usuario</button>
+            <button class="btn btn-warning mt-3 text-white">Reportes</button>
+            <button class="btn btn-danger mt-3 text-white">Permisos</button> 
+            <button class="btn btn-info mt-3 text-white">Solicitud de Permisos Pendientes</button>
+
+        </div>
+        <div class="texto">
+            <h1 >Listado de Catedráticos que no han solicitado permisos
+                durante el año</h1>
+             <label for="estados">PAC:</label>
+             <select id="estados" name="estados">
+                <option value="aprobado">1</option>
+                <option value="denegado">2</option>
+                <option value="pendiente">3</option>
+            </select>
+            <label for="fechaFinal">Fecha:</label>
+            <input type="date" id="fechaFinal" name="fechaFinal">
+        </div>
+      <table>
+        <thead>
+            <tr>
+                <th>No. de Empleado</th>
+                <th>Docente</th>
+               
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>001</td>
+                <td>Nombre Docente 1</td>
+                
+                
+            </tr>
+            <tr>
+                <td>002</td>
+                <td>Nombre Docente 2</td>
+                             
+            </tr>
+            <tr>
+                <td>001</td>
+                <td>Nombre Docente 1</td>
+             
+                
+            </tr>
+                <td>001</td>
+                <td>Nombre Docente 1</td>
+              
+            </tr>
+            <tr>
+                <td>001</td>
+                <td>Nombre Docente 1</td>
+                
+               
+            </tr>
+            <tr>
+                <td>001</td>
+                <td>Nombre Docente 1</td>
+               
+                
+            </tr>
+            <tr>
+                <td>001</td>
+                <td>Nombre Docente 1</td>
+            
+                
+            </tr>
+        </tbody>
+    </table>
+    </body>
+    </html>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
